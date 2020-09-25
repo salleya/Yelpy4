@@ -57,7 +57,7 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
         let restaurant = restaurantsArray[indexPath.row]
         
         // Set Label to restaurant name for each cell
-        cell.label!.text = restaurant["name"] as? String //?? ""
+        cell.label.text = restaurant["name"] as? String ?? ""
         
         //Set Image of restaurant
         if let imageUrlString = restaurant["image_url"] as? String {
