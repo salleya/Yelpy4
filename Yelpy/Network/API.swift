@@ -17,9 +17,9 @@ struct API {
         
         let apikey = "04xem-7qB0W84jZs9uTYDsTUZj3gLJPthl5yi5IXqo_D0oLQ1He4ImOB5D5G3Vm9G9yGQ7V1YrfMewnqcrhFw5GgotlPjOMGUZ-P0ikPehTd5Y9IVA_NVLRreQJtX3Yx"
         
-        // Coordinates for San Francisco
-        let lat = 37.773972
-        let long = -122.431297
+        // Coordinates for Denver
+        let lat = 39.7392
+        let long = -104.9903
         
         
         let url = URL(string: "https://api.yelp.com/v3/transactions/delivery/search?latitude=\(lat)&longitude=\(long)")!
