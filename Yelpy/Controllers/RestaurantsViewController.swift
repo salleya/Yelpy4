@@ -18,7 +18,7 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
     
     // –––––– TODO: Initialize restaurantsArray
     
-    var restaurantsArray: [[String: Any?]] = []
+    var restaurantsArray: [Restaurant] = []
     
     // ––––– TODO: Add tableView datasource + delegate
     override func viewDidLoad() {
@@ -57,13 +57,16 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
         let restaurant = restaurantsArray[indexPath.row]
         
         // Set Label to restaurant name for each cell
-        cell.label.text = restaurant["name"] as? String ?? ""
+        // cell.label.text = restaurant["name"] as? String ?? ""
         
         //Set Image of restaurant
-        if let imageUrlString = restaurant["image_url"] as? String {
-            let imageUrl = URL(string: imageUrlString)
-            cell.restaurantImage.af.setImage(withURL : imageUrl!)
-        }
+        // if let imageUrlString = restaurant["image_url"] as? String {
+        //     let imageUrl = URL(string: imageUrlString)
+        //     cell.restaurantImage.af.setImage(withURL : imageUrl!)
+        
+        cell.r = restaurant
+        
+        // }
         
         return cell
     }
