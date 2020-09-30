@@ -30,6 +30,14 @@ class RestaurantsViewController: UIViewController, UITableViewDelegate, UITableV
         getAPIData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as!UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let r = restaurantsArray[indexPath.row]
+            let detailViewController = segue.destination as! RestaurantDetailViewController
+            detailViewController.r = r
+        }
+    }
     
     // ––––– TODO: Get data from API helper and retrieve restaurants
     
